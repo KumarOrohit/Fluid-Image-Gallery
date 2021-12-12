@@ -1,0 +1,207 @@
+.main-page {
+  display: grid;
+  grid-template-rows: 90px 1fr;
+
+  .header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(233, 249, 255);
+    .right {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      .cols {
+        padding-top: 35px;
+      }
+      .col1 {
+        &:hover {
+          background-color: rgb(96, 208, 252);
+        }
+      }
+      .col2 {
+        &:hover {
+          background-color: rgb(248, 127, 106);
+        }
+      }
+      .col3 {
+        &:hover {
+          background-color: rgb(252, 219, 85);
+        }
+      }
+      .clickcol {
+        &:hover {
+          background-color: rgb(103, 206, 206);
+        }
+      }
+      .map {
+        &:hover {
+          background-color: rgb(103, 170, 206);
+        }
+      }
+    }
+  }
+  .display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 3px;
+    .image {
+      width: 360px;
+      height: 360px;
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+    .hover-item {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      cursor: pointer;
+      .items {
+        padding-top: 80px;
+        color: white;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .image-container {
+      cursor: pointer;
+    }
+    .image-name {
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 2;
+      color: white;
+      padding-top: 100px;
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    }
+    .overlay {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 3;
+    }
+    .popup {
+      position: absolute;
+      width: max-content;
+      height: max-content;
+      left: 29%;
+      border-radius: 15px;
+      padding: 5px;
+      .left-arrow {
+        padding-top: 30%;
+        color: white;
+      }
+      .right-arrow {
+        padding-top: 30%;
+        color: white;
+      }
+      .content {
+        display: grid;
+        grid-template-rows: 50px 1fr;
+        padding-top: 9%;
+        .close {
+          color: white;
+          padding-left: 580px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .columns {
+    background-color: rgb(103, 206, 206);
+    display: grid;
+
+    .background {
+      padding: 20px 12%;
+      .row-1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+      }
+      .card {
+        background-color: rgb(216, 250, 247);
+        height: max-content;
+        padding: 15px;
+        margin: 15px;
+        text-align: left;
+      }
+      .row-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+      }
+      .row-4 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin: 0px 35%;
+        margin-top: 80px;
+      }
+    }
+  }
+  .msg {
+    background-color: rgb(103, 170, 206);
+    display: grid;
+    grid-template-rows: 1fr 160px;
+    .message {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px 12%;
+      .msg-card {
+        background-color: rgb(233, 249, 255);
+        height: 600px;
+        padding: 25px 15px;
+        margin: 15px;
+        text-align: left;
+        .text-head {
+          font-size: 28px;
+        }
+        .text {
+          padding-top: 25px;
+          font-size: 18px;
+        }
+        .pad {
+          padding-top: 25px;
+          .input-msg {
+            width: 490px;
+            height: 40px;
+            padding-left: 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(189, 189, 189, 0.73);
+
+            &::placeholder {
+              font-size: 18px;
+            }
+          }
+          .box {
+            height: 140px;
+          }
+          .button-send {
+            height: 50px;
+            width: 100px;
+            border: none;
+            background-color: rgb(39, 121, 245);
+            color: white;
+            font-size: 18px;
+          }
+          .row-map {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            margin-top: 80px;
+          }
+        }
+      }
+    }
+  }
+}
